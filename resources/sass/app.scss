@@ -1,17 +1,19 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import "~glyphicons-only-bootstrap/css/bootstrap.css";
+
+$border-radius-circle: 50%;
+$color-a: #b5c5cfd6;
 
 .navbar-laravel {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
 .main-navbar {
     z-index: 20;
     position: fixed;
@@ -51,8 +53,6 @@
         box-shadow: 0 10px 20px 5px rgba(27, 161, 247, 0.3);
     }
 
-
-
     .central-ul {
         margin-right: auto;
         margin-left: auto;
@@ -82,7 +82,7 @@
         //}
 
         .nav-link:hover {
-            color: #0997df;
+            color: #0997df !important;
         }
 
         li {
@@ -102,6 +102,7 @@
         }
         .avatar {
             img {
+                border-radius: $border-radius-circle;
                 width: 50px;
                 cursor: pointer;
             }
@@ -123,7 +124,7 @@
 
     .navbar-collapse {
         a {
-            color: #b5c5cfd6!important;
+            color: $color-a !important;
             font-size: 14px;
             font-weight: 700;
             line-height: 20px;
@@ -164,7 +165,6 @@
             position: relative;
         }
 
-
         .items:hover::before {
             opacity: 1;
         }
@@ -175,9 +175,9 @@
             content: '';
             background: #26c8fc;
             background: -moz-linear-gradient(left, #26c8fc 0%, #0997df 100%);
-            background: -webkit-linear-gradient(left, #26c8fc 0%,#0997df 100%);
-            background: linear-gradient(to right, #26c8fc 0%,#0997df 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26c8fc', endColorstr='#0997df',GradientType=1 );
+            background: -webkit-linear-gradient(left, #26c8fc 0%, #0997df 100%);
+            background: linear-gradient(to right, #26c8fc 0%, #0997df 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#26c8fc', endColorstr='#0997df', GradientType=1);
             float: left;
             position: absolute;
             left: 0;
@@ -188,7 +188,6 @@
             border-radius: 0 52px 50px 0;
             box-shadow: 0 0 15px #01ACFD;
         }
-
 
         .item-1 {
             background: url("/images/side-nav1.png") no-repeat center;
@@ -210,6 +209,99 @@
         }
     }
 }
+
+$big-radius: 1.25rem;
+$border-line-color: #eaf0f4;
 .content {
     padding-top: 80px;
+    padding-left: 68px;
+
+    .card-header {
+        position: relative;
+        background-image: linear-gradient(to right, #2a3e51, #487393);
+        .profile-btn {
+            margin: 5px;
+            border-radius: $big-radius;
+            span {
+                margin: 0 3px;
+            }
+        }
+        .progress-container {
+            width: 30%;
+            margin: auto;
+            .progress {
+                margin: 10px;
+                height: 10px;
+                background-color: #8194a6;
+                div {
+
+                }
+            }
+            .progress, .progress div {
+                border-radius: $big-radius;
+            }
+
+            .progress-status {
+                text-align: center;
+                color: white;
+            }
+        }
+        .second-row {
+            height: 100px;
+        }
+        .big-avatar {
+            border-radius: $border-radius-circle;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            bottom: -25px;
+            right: calc(100% / 2 - 75px);
+            box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.38);
+        }
+    }
+    .card {
+        border-radius: 0.75rem;
+    }
+    .card-header:first-child {
+        border-radius: calc(0.75rem - 1px) calc(0.75rem - 1px) 0 0;
+    }
+    .card-body {
+        padding: 15px;
+    }
+    .button-section {
+        border-top: 1px solid $border-line-color;
+        border-bottom: 1px solid $border-line-color;
+        padding: 10px;
+        a {
+            color: $color-a;
+        }
+    }
+
+}
+
+
+.custom-btn {
+    border: 0;
+    padding: 0 10px 0 10px;
+    color: white;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100px;
+    height: 31px;
+    -webkit-box-shadow: 0 10px 15px rgba(51, 100, 127, 0.2);
+    box-shadow: 0 10px 15px rgba(51, 100, 127, 0.2);
+    border-radius: 19px;
+    background-image: linear-gradient(129deg, #29ccff 0%, #0794dd 100%);
+    svg {
+        fill: white;
+        width: 20px;
+    }
 }

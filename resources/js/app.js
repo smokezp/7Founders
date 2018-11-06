@@ -5,7 +5,7 @@
  */
 
 require('./bootstrap');
-
+require('glyphicons');
 window.Vue = require('vue');
 
 /**
