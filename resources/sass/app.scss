@@ -6,8 +6,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import "~glyphicons-only-bootstrap/css/bootstrap.css";
 
-$border-radius-circle: 50%;
-$color-a: #b5c5cfd6;
+@import "modal";
 
 .navbar-laravel {
     background-color: #fff;
@@ -210,8 +209,7 @@ $color-a: #b5c5cfd6;
     }
 }
 
-$big-radius: 1.25rem;
-$border-line-color: #eaf0f4;
+
 .content {
     padding-top: 80px;
     padding-left: 68px;
@@ -280,7 +278,6 @@ $border-line-color: #eaf0f4;
     }
 
 }
-
 
 .custom-btn {
     border: 0;

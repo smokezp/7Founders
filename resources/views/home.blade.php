@@ -249,4 +249,5 @@
         </div>
     </div>
 </div>
+<post-register-modal>
 @endsection
