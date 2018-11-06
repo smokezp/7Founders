@@ -260,7 +260,9 @@ $border-line-color: #eaf0f4;
         }
     }
     .card {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
         border-radius: 0.75rem;
+        border: 0;
     }
     .card-header:first-child {
         border-radius: calc(0.75rem - 1px) calc(0.75rem - 1px) 0 0;
@@ -307,9 +309,7 @@ $border-line-color: #eaf0f4;
 
 }
 
-
 .circle-btn {
-
     border: 0;
     padding: 10px;
     color: white;
@@ -330,19 +330,28 @@ $border-line-color: #eaf0f4;
     border-radius: 19px;
     background-image: linear-gradient(129deg, #29ccff 0%, #0794dd 100%);
     span {
-        margin: 0px 4px;
+        margin: 0 4px;
+        top: 0;
     }
 }
 
 .custom-input {
-    border: 0px solid #ced4da;
+    border: 0;
 }
 
 .circle-btn:hover,
-.custom-btn :hover {
+.custom-btn:hover {
     cursor: pointer;
 }
 
-//border-bottom: 1px solid $border-line-color;
+.input-wrapper {
+    border-bottom: 1px solid $border-line-color;
+    .form-group {
+        margin: 40px 0;
+    }
+}
 
+.profile-body form:last-child .input-wrapper {
+    border-bottom: 0;
+}
 

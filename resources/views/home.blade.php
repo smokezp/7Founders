@@ -82,33 +82,166 @@
                         </div>
 
                     </div>
-                    <div class="col-md-8 m-auto pt-4">
+                    <div class="col-md-8 m-auto profile-body">
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">About Me</label>
+                                    <span class="glyphicon glyphicon-eye-close"></span>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="email" class="form-control custom-input" id="aboutMe"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
 
-
-                    {{--<form>--}}
-
-
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">About Me</label>
-                            <span class="glyphicon glyphicon-eye-close"></span>
-                            <div class="row">
-                                <div class="col-sm">
-                                    <input type="email" class="form-control custom-input" id="aboutMe"
-                                           placeholder="Write a short intro about yourself">
+                                    </div>
                                 </div>
-                                <div class="col-sm">
-                                    <button type="button" class="circle-btn float-right">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </button>
-                                </div>
-
                             </div>
+                        </form>
 
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="work_experience">Work Experience</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="text" class="form-control custom-input" id="work_experience"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
 
-                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="skills">Skills</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="text" class="form-control custom-input" id="skills"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
 
-                    {{--</form>--}}
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{--endform--}}
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="network">Network</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="text" class="form-control custom-input" id="network"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{--endform--}}
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="education">Education</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="text" class="form-control custom-input" id="education"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{--endform--}}
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="recommendations">Recommendations</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="text" class="form-control custom-input" id="recommendations"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{--endform--}}
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="projects">Projects</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="text" class="form-control custom-input" id="projects"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{--endform--}}
+                        <form action="" method="post">
+                            <div class="input-wrapper">
+                                <div class="form-group">
+                                    <label for="languages">Languages</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="text" class="form-control custom-input" id="languages"
+                                                   placeholder="Write a short intro about yourself">
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="submit" class="circle-btn float-right">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
