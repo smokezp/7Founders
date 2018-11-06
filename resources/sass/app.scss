@@ -304,4 +304,45 @@ $border-line-color: #eaf0f4;
         fill: white;
         width: 20px;
     }
+
 }
+
+
+.circle-btn {
+
+    border: 0;
+    padding: 10px;
+    color: white;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    -webkit-box-shadow: 0 10px 15px rgba(51, 100, 127, 0.2);
+    box-shadow: 0 10px 15px rgba(51, 100, 127, 0.2);
+    border-radius: 19px;
+    background-image: linear-gradient(129deg, #29ccff 0%, #0794dd 100%);
+    span {
+        margin: 0px 4px;
+    }
+}
+
+.custom-input {
+    border: 0px solid #ced4da;
+}
+
+.circle-btn:hover,
+.custom-btn :hover {
+    cursor: pointer;
+}
+
+//border-bottom: 1px solid $border-line-color;
+
+
