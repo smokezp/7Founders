@@ -17,7 +17,8 @@
 }
 
 .modal-container {
-    width: 600px;
+    min-height: 550px;
+    width: 1000px;
     margin: 0 auto;
     //padding: 20px 30px;
     background-color: #fff;
@@ -48,13 +49,12 @@
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.38);
     }
 
-    .close-modal-btn:hover {
-        cursor: pointer;
-    }
-
     .close-modal-btn {
         font-size: 50px;
         -webkit-text-fill-color: #b5c6cf;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
 
@@ -67,6 +67,153 @@
 
 .modal-body {
     margin: 20px 0;
+    .card-body {
+
+        .text {
+            background: white;
+            text-align: center;
+            //padding: 80px 0px 40px;
+            color: #33647f;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 41px;
+        }
+    }
+
+    .step-2 {
+        //.Mainbox {
+        //    display: -webkit-box;
+        //    display: -ms-flexbox;
+        //    display: flex;
+        //    -webkit-box-pack: justify;
+        //    -ms-flex-pack: justify;
+        //    justify-content: space-between;
+        //
+        //    input[type="radio"]:checked + label {
+        //        border-radius: 8px;
+        //        border: 4px solid #1dbbdf;
+        //    }
+        //
+        //    input.mainbox-radio {
+        //        visibility: hidden;
+        //        margin: 0;
+        //        padding: 0;
+        //        width: 0;
+        //        height: 0;
+        //        border: none;
+        //        background-color: transparent;
+        //    }
+        //    label {
+        //        box-shadow: 0 2px 3px #d5e2ea;
+        //        border-radius: 8px;
+        //        border: 1px solid #b5c5cf;
+        //        background-color: #ffffff;
+        //        display: block;
+        //        width: 100%;
+        //        margin: 0 15px;
+        //        .box {
+        //            text-align: center;
+        //            .userBox {
+        //                width: 94px;
+        //                height: 94px;
+        //                background-color: #f3f9fc;
+        //                border-radius: 50%;
+        //                margin: auto;
+        //                margin-bottom: 50px;
+        //                margin-top: 50px;
+        //            }
+        //        }
+        //    }
+        //
+        //}
+
+        .projects {
+            margin: 15px 0;
+            [type=radio] {
+                position: absolute;
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            [type=radio]:checked + label {
+                border: 4px solid #1dbbdf;
+                margin: 17px;
+            }
+
+            label {
+                box-shadow: 0 2px 3px #d5e2ea;
+                border-radius: 8px;
+                border: 1px solid #b5c5cf;
+                background-color: #ffffff;
+                margin: 20px;
+                padding: 10px;
+                .box {
+                    text-align: center;
+                    .userBox {
+                        width: 94px;
+                        height: 94px;
+                        background-color: #f3f9fc;
+                        border-radius: 50%;
+                        margin: 30px auto;
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .step-3 {
+        .investment-form {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px;
+            box-shadow: 0 3px 10px #a7a7a738;
+            //height: 50px;
+            .vue-switcher-theme--custom {
+                margin-bottom: 0!important;
+                div {
+                    top:0!important;
+                    background: #33ccff !important;
+                    &:after {
+                        background: white;
+                    }
+                }
+            }
+
+        }
+
+
+        .vue-slider-component .vue-slider .vue-slider-dot:first-child .vue-slider-dot-handle {
+            border: 7px solid #2dd6e0!important
+        }
+
+        .vue-slider-dot-handle {
+            border: 7px solid #0590dd
+        }
+    }
+
+    .step-4 {
+
+        .modal-input {
+            border-radius: 8px;
+            border: 1px solid #d5e2ea;
+            background-color: rgba(51, 100, 127, 0.05);
+            margin-bottom: 20px;
+            color: #b5c5cf;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 19px;
+            text-transform: uppercase;
+            display: block;
+            width: 100%;
+            padding: 18px 16px;
+        }
+    }
+
 }
 
 .modal-default-button {
@@ -94,5 +241,42 @@
 .modal-leave-active .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.modal-next-btn {
+    text-align: center;
+    display: block;
+    border: 0;
+    padding: 0 15px;
+    color: white;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 200px;
+    height: 50px;
+    -webkit-box-shadow: 0 10px 15px rgba(51, 100, 127, 0.2);
+    box-shadow: 0 10px 15px rgba(51, 100, 127, 0.2);
+    border-radius: 30px;
+    //background-image: linear-gradient(129deg, #29ccff 0%, #0794dd 100%);
+    background: url("/images/next-btn-backgoud.png") no-repeat center;
+    margin: 30px auto;
+    .arrow-right {
+        float: right;
+        margin-top: 2px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.modal-label {
+    text-align: left;
+    display: block;
+    color: #33647f;
+    font-size: 16px;
+    font-weight: 300;
 }
 

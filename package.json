@@ -22,6 +22,8 @@
   "dependencies": {
     "glyphicons": "^0.2.0",
     "glyphicons-only-bootstrap": "^1.0.1",
-    "vue-click-outside": "^1.0.7"
+    "vue-click-outside": "^1.0.7",
+    "vue-slider-component": "^2.8.0",
+    "vue-switches": "^2.0.1"
   }
 }

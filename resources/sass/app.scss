@@ -162,10 +162,9 @@
             float: left;
             margin: 25px 0;
             position: relative;
-        }
-
-        .items:hover::before {
-            opacity: 1;
+            &:hover::before {
+                opacity: 1;
+            }
         }
 
         .items::before {
