@@ -196,24 +196,6 @@
         }
     }
 
-    .step-4 {
-
-        .modal-input {
-            border-radius: 8px;
-            border: 1px solid #d5e2ea;
-            background-color: rgba(51, 100, 127, 0.05);
-            margin-bottom: 20px;
-            color: black;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 19px;
-            text-transform: uppercase;
-            display: block;
-            width: 100%;
-            padding: 18px 16px;
-        }
-    }
-
 }
 
 .modal-default-button {
@@ -280,3 +262,24 @@
     font-weight: 300;
 }
 
+.modal-input {
+    border-radius: 8px;
+    border: 1px solid #d5e2ea;
+    background-color: rgba(51, 100, 127, 0.05);
+    margin-bottom: 20px;
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 18px 16px;
+}
+
+
+
+// fixes for date picker
+.mx-input-append {
+    height: 35px!important;
+}
