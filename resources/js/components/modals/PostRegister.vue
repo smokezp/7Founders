@@ -6,10 +6,10 @@
 
                     <div class="modal-header">
                         <slot name="header">
-                            <img class="logo" src="images/7founders-logo.png">
+                            <img class="logo" src="/images/7founders-logo.png">
                         </slot>
                         <span class="glyphicon glyphicon-remove-circle close-modal-btn" @click="close"></span>
-                        <img class="medium-avatar" src="images/userImg.png">
+                        <img class="medium-avatar" src="/images/userImg.png">
                     </div>
 
                     <div class="modal-body">
@@ -169,7 +169,7 @@
                                             </div>
                                             <button type="button" class="modal-next-btn" @click="nextStep">
                                                 {{step === 1 ? "Lets' Go!" : "Next"}}
-                                                <img class="arrow-right" src="images/arrow-right.png">
+                                                <img class="arrow-right" src="/images/arrow-right.png">
                                             </button>
                                         </div>
                                     </div>
@@ -200,9 +200,8 @@
                 workedHere: null,
                 marcoTask: true,
                 cdFounder: true,
-                last_step: 4,
+                lastStep: 4,
                 hide: false,
-                value: [0, 30],
 
                 vueSwitchSettings: {
                     theme: 'custom',
@@ -226,22 +225,26 @@
                 this.hide = true;
             },
             nextStep() {
-                switch (this.step) {
-                    case 2:
-                        // axios.post('')
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-
-                }
                 this.step += 1;
+                if (this.step > this.lastStep) {
+                    let options = {
+                        investment_project: this.investmentProject,
+                        job_title: this.jobTitle,
+                        company_name: this.companyName,
+                        active_industry: this.activeIndustry,
+                        worked_here: this.workedHere,
+                        marco_task: this.marcoTask,
+                        cd_founder: this.cdFounder,
+                        status_range_start: this.vuSliderSettings.value[0],
+                        status_range_end:  this.vuSliderSettings.value[1]
+                    };
 
-
-                if (this.step > this.last_step) {
-                    console.log('close111');
-                    this.close();
+                    axios.post('/user/info', options).then((response) => {
+                        // console.log('response', response);
+                        if (response.status === 200) {
+                            this.close();
+                        }
+                    });
                 }
             }
         },
