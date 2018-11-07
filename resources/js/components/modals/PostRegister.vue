@@ -2,7 +2,7 @@
     <transition name="modal" v-if="!hide">
         <div class="modal-mask">
             <div class="modal-wrapper">
-                <div class="modal-container" v-click-outside="close">
+                <div class="modal-container">
 
                     <div class="modal-header">
                         <slot name="header">
@@ -184,7 +184,6 @@
 </template>
 
 <script>
-    import ClickOutside from 'vue-click-outside';
     import vueSlider from 'vue-slider-component';
     import Switches from 'vue-switches';
     import axios from 'axios';
@@ -250,9 +249,6 @@
         },
         components: {
             vueSlider, Switches
-        },
-        directives: {
-            ClickOutside
         }
     }
 </script>

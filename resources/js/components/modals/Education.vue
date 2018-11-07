@@ -2,7 +2,7 @@
     <transition name="modal">
         <div class="modal-mask">
             <div class="modal-wrapper">
-                <div class="modal-container" v-click-outside="close">
+                <div class="modal-container">
 
                     <div class="modal-header">
                         <slot name="header">
@@ -63,7 +63,6 @@
 </template>
 
 <script>
-    import ClickOutside from 'vue-click-outside';
     import DatePicker from 'vue2-datepicker'
 
     export default {
@@ -76,7 +75,7 @@
                 datePickerSettings: {
                     start: '',
                     end: '',
-                    width: 120,
+                    width: 150,
                     lang: 'en',
                     firstDayOfWeek: 1,
                 }
@@ -93,9 +92,6 @@
         },
         components: {
             DatePicker
-        },
-        directives: {
-            ClickOutside
         }
     }
 </script>
