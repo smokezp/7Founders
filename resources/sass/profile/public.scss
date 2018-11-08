@@ -1,27 +1,56 @@
+.public-profile-modal-mask {
+    position: absolute!important;
+    .public-profile {
+        //min-height: 550px;
+        //width: 1000px;
+        width: 800px;
+        height: 100%;
+        margin: 0 auto;
+        //padding: 20px 30px;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+        transition: all .3s ease;
+        font-family: Helvetica, Arial, sans-serif;
 
-.public-profile {
-    //min-height: 550px;
-    //width: 1000px;
-    width: 700px;
-    height: 100%;
-    margin: 0 auto;
-    //padding: 20px 30px;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-    transition: all .3s ease;
-    font-family: Helvetica, Arial, sans-serif;
+        .user-panel {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            white-space: nowrap;
+            font-size: 15px;
+            font-weight: 500;
+            border-bottom: 3px solid $gray-color;
+            a {
+                color: rgba(0, 0, 0, 0.63);
+                text-decoration: none;
+            }
+        }
 
-    .user-panel {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        white-space: nowrap;
-        font-size: 15px;
-        font-weight: 500;
-        border-bottom: 3px solid $gray-color;
-        a {
-            color: rgba(0, 0, 0, 0.63);
-            text-decoration: none;
+        .progress-container {
+            width: 100%;
+            margin: auto;
+            .progress {
+                margin: 10px;
+                background-color: $light-gray-color;
+                .progress-bar {
+                    background-image: linear-gradient(129deg, #29ccff 0%, #0794dd 100%);
+                }
+            }
+            .progress, .progress div {
+                border-radius: $big-radius;
+            }
+
+        }
+
+        .bottom-line {
+            border-bottom: 1px solid $gray-color;
+        }
+
+        .user-section {
+            margin-top: 50px;
+        }
+        .profile-show-mode {
+
         }
     }
 }

@@ -2,7 +2,7 @@
     <div class="col-md-8 m-auto profile-body">
         <div class="input-wrapper">
             <div class="form-group">
-                <label>About Me</label>
+                <label class="profile-label">About Me</label>
                 <span class="glyphicon glyphicon-eye-close"></span>
                 <div class="row">
                     <div class="col-sm">
@@ -19,7 +19,7 @@
         </div>
         <div class="input-wrapper">
             <div class="form-group">
-                <label>Work Experience</label>
+                <label class="profile-label">Work Experience</label>
                 <div class="row">
                     <div class="col-sm">
                         Write a short intro about yourself
@@ -35,7 +35,7 @@
         </div>
         <div class="input-wrapper">
             <div class="form-group">
-                <label>Skills</label>
+                <label class="profile-label">Skills</label>
                 <div class="row">
                     <div class="col-sm">
                         Write a short intro about yourself
@@ -51,7 +51,7 @@
         </div>
         <div class="input-wrapper">
             <div class="form-group">
-                <label>Network</label>
+                <label class="profile-label">Network</label>
                 <div class="row">
                     <div class="col-sm">
                         Write a short intro about yourself
@@ -67,7 +67,7 @@
         </div>
         <div class="input-wrapper">
             <div class="form-group">
-                <label>Education</label>
+                <label class="profile-label">Education</label>
                 <div class="row">
                     <div class="col-sm" v-if="!educations">
                         Write a short intro about yourself
@@ -91,7 +91,7 @@
         </div>
         <div class="input-wrapper">
             <div class="form-group">
-                <label>Recommendations</label>
+                <label class="profile-label">Recommendations</label>
                 <div class="row">
                     <div class="col-sm">
                         Write a short intro about yourself
@@ -107,7 +107,7 @@
         </div>
         <div class="input-wrapper">
             <div class="form-group">
-                <label>Projects</label>
+                <label class="profile-label">Projects</label>
                 <div class="row">
                     <div class="col-sm">
                         Write a short intro about yourself
@@ -123,7 +123,7 @@
         </div>
         <div class="input-wrapper">
             <div class="form-group">
-                <label>Languages</label>
+                <label class="profile-label">Languages</label>
                 <div class="row">
                     <div class="col-sm">
                         Write a short intro about yourself

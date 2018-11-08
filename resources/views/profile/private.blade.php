@@ -40,7 +40,7 @@
                             </div>
                             <div class="row text-center">
                                 <div class="col-sm">
-                                    <span class="user-role">
+                                    <span class="blue-text">
                                         Full Stack Developer
                                     </span>
                                 </div>

@@ -82,51 +82,6 @@
     }
 
     .step-2 {
-        //.Mainbox {
-        //    display: -webkit-box;
-        //    display: -ms-flexbox;
-        //    display: flex;
-        //    -webkit-box-pack: justify;
-        //    -ms-flex-pack: justify;
-        //    justify-content: space-between;
-        //
-        //    input[type="radio"]:checked + label {
-        //        border-radius: 8px;
-        //        border: 4px solid #1dbbdf;
-        //    }
-        //
-        //    input.mainbox-radio {
-        //        visibility: hidden;
-        //        margin: 0;
-        //        padding: 0;
-        //        width: 0;
-        //        height: 0;
-        //        border: none;
-        //        background-color: transparent;
-        //    }
-        //    label {
-        //        box-shadow: 0 2px 3px #d5e2ea;
-        //        border-radius: 8px;
-        //        border: 1px solid #b5c5cf;
-        //        background-color: #ffffff;
-        //        display: block;
-        //        width: 100%;
-        //        margin: 0 15px;
-        //        .box {
-        //            text-align: center;
-        //            .userBox {
-        //                width: 94px;
-        //                height: 94px;
-        //                background-color: #f3f9fc;
-        //                border-radius: 50%;
-        //                margin: auto;
-        //                margin-bottom: 50px;
-        //                margin-top: 50px;
-        //            }
-        //        }
-        //    }
-        //
-        //}
 
         .projects {
             text-align: center;
@@ -156,7 +111,7 @@
                     .userBox {
                         width: 94px;
                         height: 94px;
-                        background-color: #f3f9fc;
+                        background-color: $light-gray-color;
                         border-radius: 50%;
                         margin: 30px auto;
                     }
