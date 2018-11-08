@@ -14,7 +14,6 @@
                             <br><span class="blue-text">Full Stack Developer</span>
                         </div>
                     </div>
-
                 </div>
                 <div class="profile-body">
                     <div class="row user-panel text-center">
@@ -145,10 +144,66 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="profile-show-mode"></button>
+
                     </div>
+                    <button type="button" class="btn btn-light profile-btn profile-show-more-btn">
+                        <span class="glyphicon glyphicon-ok-circle"></span>Show More
+                    </button>
+                    {{--end-id--}}
 
-
+                    <div class="user-section" id="my_skills">
+                        <label class="profile-label">My Skills</label>
+                        <div class="col-md-11">
+                            <div class="row mt-3">
+                                <div class="col-md">
+                                    <div class="progress-container">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="float-left">Grow Hacker</span>
+                                        <span class="float-right">10+ years Expert</span>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="progress-container">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="float-left">Grow Hacker</span>
+                                        <span class="float-right">10+ years Expert</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md">
+                                    <div class="progress-container">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="float-left">Grow Hacker</span>
+                                        <span class="float-right">10+ years Expert</span>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="progress-container">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="float-left">Grow Hacker</span>
+                                        <span class="float-right">10+ years Expert</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-light profile-btn profile-show-more-btn">
+                        <span class="glyphicon glyphicon-ok-circle"></span>Show More
+                    </button>
+                    {{--end-id--}}
                     <div class="user-section" id="education">
                         <label class="profile-label">Education</label>
                         <div class="col-md-11 m-auto education">

@@ -68,18 +68,29 @@
         <div class="input-wrapper">
             <div class="form-group">
                 <label class="profile-label">Education</label>
+                <div class="educations" v-if="educations">
+                    <div class="education" v-for="education in educations">
+                        <div class="row">
+                            <div class="col-2 m-auto">
+                                <div class="icon-box">
+                                    <img src="/images/education.png">
+                                </div>
+                            </div>
+                            <div class="col-6 m-auto">
+                                {{education.name}}
+                                <br><span class="blue-text">{{education.study_field}}</span>
+                            </div>
+                            <div class="col-4 float-right text-right m-auto">
+                                {{education.start_year}} - {{education.end_year}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-sm" v-if="!educations">
                         Write a short intro about yourself
                     </div>
-                    <div class="educations" v-else>
-                        <div class="education" v-for="education in educations">
-                            {{education.name}}
-                            {{education.study_field}}
-                            {{education.start_year}}
-                            {{education.end_year}}
-                        </div>
-                    </div>
+
                     <div class="col-sm">
                         <button type="button" class="circle-btn float-right" @click="showModal = 'education'">
                             <span class="glyphicon glyphicon-plus"></span>

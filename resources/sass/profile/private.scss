@@ -2,13 +2,6 @@
     .card-header {
         position: relative;
         background-image: linear-gradient(to right, #2a3e51, #487393);
-        .profile-btn {
-            margin: 5px;
-            border-radius: $big-radius;
-            span {
-                margin: 0 3px;
-            }
-        }
         .progress-container {
             width: 30%;
             margin: auto;
