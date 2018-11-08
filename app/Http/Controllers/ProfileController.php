@@ -15,10 +15,28 @@ class ProfileController extends Controller
     public function index(Request $request)
     {
         if ($request->id == Auth::id()) {
-            $view = 'private';
+            $user = Auth::user();
+            $educations = $user->educations;
+            return view('profile.private', compact('educations'));
         } else {
-            $view = 'public';
+            return view('profile.public');
         }
-        return view('profile.' . $view);
+
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function education(Request $request)
+    {
+        $res = false;
+        if ($request->ajax()) {
+            $res = Auth::user()->educations()->create($request->all());
+            $code = 200;
+        } else {
+            $code = 400;
+        }
+        return response()->json($res, $code);
     }
 }

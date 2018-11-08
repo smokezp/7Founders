@@ -2,8 +2,9 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 
-class Education
+class Education extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -16,5 +17,7 @@ class Education
         'start_date',
         'end_date'
     ];
+
+    protected $table = 'educations';
 
 }

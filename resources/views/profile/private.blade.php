@@ -83,7 +83,7 @@
 
                         </div>
 
-                        <private-profile-body></private-profile-body>
+                        <private-profile-body :educations="{{$educations}}"></private-profile-body>
 
                     </div>
 

@@ -64,6 +64,7 @@
 
 <script>
     import DatePicker from 'vue2-datepicker'
+    import axios from 'axios';
 
     export default {
         name: "EducationModal",
@@ -87,7 +88,32 @@
                 this.$root.$emit('hide-modal');
             },
             save() {
+                axios.post('/profile/education', {
+                    name: this.educationName,
+                    study_field: this.studyField,
+                    start_date: this.getDate(this.datePickerSettings.start),
+                    end_date: this.getDate(this.datePickerSettings.end),
+                }).then((response) => {
+                    if (response.status === 200) {
+                        this.$root.$emit('add-user-data', 'educations', response.data);
+                        this.close();
+                    }
+                });
+            },
+            getDate(datetime) {
+                let date = new Date(datetime);
+                let month = date.getMonth() + 1;
+                let day = date.getDate();
 
+                if (month < 10) {
+                    month = '0' + month;
+                }
+
+                if (day < 10) {
+                    day = '0' + day;
+                }
+
+                return date.getFullYear() + '-' + month + '-' + day;
             }
         },
         components: {

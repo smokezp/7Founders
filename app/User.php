@@ -32,7 +32,7 @@ class User extends Authenticatable
         return $this->hasOne(UserInfo::class);
     }
 
-    public function education() {
+    public function educations() {
         return $this->hasMany(Education::class);
     }
 }
