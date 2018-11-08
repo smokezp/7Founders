@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center private-profile">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
@@ -30,7 +30,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="profile-body">
                         <div class="col-md-6 pt-3 m-auto">
                             <div class="row text-center">
                                 <div class="col-sm">
@@ -40,7 +40,9 @@
                             </div>
                             <div class="row text-center">
                                 <div class="col-sm">
-                                    Full Stack Developer
+                                    <span class="user-role">
+                                        Full Stack Developer
+                                    </span>
                                 </div>
                             </div>
                             <div class="row text-center mt-3">
@@ -51,7 +53,7 @@
                         </div>
 
                     </div>
-                    <div class="card-body">
+                    <div class="profile-body">
                         <div class="row button-section">
                             <div class="col-md-2">
 

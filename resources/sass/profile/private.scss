@@ -1,0 +1,63 @@
+.private-profile {
+    .card-header {
+        position: relative;
+        background-image: linear-gradient(to right, #2a3e51, #487393);
+        .profile-btn {
+            margin: 5px;
+            border-radius: $big-radius;
+            span {
+                margin: 0 3px;
+            }
+        }
+        .progress-container {
+            width: 30%;
+            margin: auto;
+            .progress {
+                margin: 10px;
+                height: 10px;
+                background-color: #8194a6;
+                div {
+
+                }
+            }
+            .progress, .progress div {
+                border-radius: $big-radius;
+            }
+
+            .progress-status {
+                text-align: center;
+                color: white;
+            }
+        }
+        .second-row {
+            height: 100px;
+        }
+        .big-avatar {
+            border-radius: $border-radius-circle;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            bottom: -25px;
+            right: calc(100% / 2 - 75px);
+            box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.38);
+        }
+    }
+    .card {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+        border-radius: 0.75rem;
+        border: 0;
+    }
+    .card-header:first-child {
+        border-radius: calc(0.75rem - 1px) calc(0.75rem - 1px) 0 0;
+    }
+
+    .button-section {
+        border-top: 1px solid $border-line-color;
+        border-bottom: 1px solid $border-line-color;
+        padding: 10px;
+        a {
+            color: $gray-color;
+        }
+    }
+
+}

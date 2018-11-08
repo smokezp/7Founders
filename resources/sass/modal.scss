@@ -36,6 +36,10 @@
     border: 0;
     height: 100px;
 
+    h3 {
+        margin-top: 0;
+        color: #42b983;
+    }
 
     .logo , .close-modal-btn {
         margin: auto 0;
@@ -60,11 +64,6 @@
     }
 
 
-}
-
-.modal-header h3 {
-    margin-top: 0;
-    color: #42b983;
 }
 
 .modal-body {
