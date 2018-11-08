@@ -76,8 +76,8 @@
                         <div class="education" v-for="education in educations">
                             {{education.name}}
                             {{education.study_field}}
-                            {{education.start_date}}
-                            {{education.end_date}}
+                            {{education.start_year}}
+                            {{education.end_year}}
                         </div>
                     </div>
                     <div class="col-sm">

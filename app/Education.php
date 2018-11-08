@@ -14,8 +14,8 @@ class Education extends Model
     protected $fillable = [
         'name',
         'study_field',
-        'start_date',
-        'end_date'
+        'start_year',
+        'end_year'
     ];
 
     protected $table = 'educations';

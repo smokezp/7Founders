@@ -34,7 +34,7 @@
                         <div class="col-md-6 pt-3 m-auto">
                             <div class="row text-center">
                                 <div class="col-sm">
-                                    {{auth()->user()->name}}
+                                    {{$user->name}}
                                 </div>
 
                             </div>
@@ -83,7 +83,7 @@
 
                         </div>
 
-                        <private-profile-body :educations="{{$educations}}"></private-profile-body>
+                        <private-profile-body :educations="{{$user->educations}}"></private-profile-body>
 
                     </div>
 

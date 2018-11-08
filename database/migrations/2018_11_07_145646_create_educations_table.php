@@ -22,8 +22,8 @@ class CreateEducationsTable extends Migration
 
             $table->string('name');
             $table->string('study_field');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->smallInteger('start_year');
+            $table->smallInteger('end_year');
 
             $table->timestamps();
         });

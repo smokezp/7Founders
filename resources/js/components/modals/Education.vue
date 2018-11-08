@@ -37,6 +37,8 @@
                                                                  :first-day-of-week="datePickerSettings.firstDayOfWeek"
                                                                  :lang="datePickerSettings.lang"
                                                                  :width="datePickerSettings.width"
+                                                                 :format="datePickerSettings.format"
+                                                                 :type="datePickerSettings.type"
                                                     ></date-picker>
                                                 </div>
                                                 <div class="col-md">
@@ -44,6 +46,8 @@
                                                                  :first-day-of-week="datePickerSettings.firstDayOfWeek"
                                                                  :lang="datePickerSettings.lang"
                                                                  :width="datePickerSettings.width"
+                                                                 :format="datePickerSettings.format"
+                                                                 :type="datePickerSettings.type"
                                                     ></date-picker>
                                                 </div>
                                             </div>
@@ -79,6 +83,8 @@
                     width: 150,
                     lang: 'en',
                     firstDayOfWeek: 1,
+                    format: 'YYYY',
+                    type: 'year'
                 }
             }
         },
@@ -91,8 +97,8 @@
                 axios.post('/profile/education', {
                     name: this.educationName,
                     study_field: this.studyField,
-                    start_date: this.getDate(this.datePickerSettings.start),
-                    end_date: this.getDate(this.datePickerSettings.end),
+                    start_year: this.getYear(this.datePickerSettings.start),
+                    end_year: this.getYear(this.datePickerSettings.end),
                 }).then((response) => {
                     if (response.status === 200) {
                         this.$root.$emit('add-user-data', 'educations', response.data);
@@ -100,20 +106,9 @@
                     }
                 });
             },
-            getDate(datetime) {
+            getYear(datetime) {
                 let date = new Date(datetime);
-                let month = date.getMonth() + 1;
-                let day = date.getDate();
-
-                if (month < 10) {
-                    month = '0' + month;
-                }
-
-                if (day < 10) {
-                    day = '0' + day;
-                }
-
-                return date.getFullYear() + '-' + month + '-' + day;
+                return date.getFullYear() ;
             }
         },
         components: {

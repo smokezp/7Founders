@@ -11,13 +11,15 @@
 |
 */
 
+use App\Http\Middleware\CheckExistProfile;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
+Route::get('/profile/{id}', 'ProfileController@index')->name('profile')->middleware(CheckExistProfile::class);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::post('/user/info', 'UserInfoController@store');

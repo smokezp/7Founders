@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,10 +17,10 @@ class ProfileController extends Controller
     {
         if ($request->id == Auth::id()) {
             $user = Auth::user();
-            $educations = $user->educations;
-            return view('profile.private', compact('educations'));
+            return view('profile.private', compact('user'));
         } else {
-            return view('profile.public');
+            $user = User::find($request->id);
+            return view('profile.public', compact('user'));
         }
 
     }
