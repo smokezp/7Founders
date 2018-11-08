@@ -41,8 +41,13 @@
         color: #42b983;
     }
 
-    .logo , .close-modal-btn {
+    .col-4 {
         margin: auto 0;
+    }
+
+    .text {
+        font-size: 25px;
+        color: $dark-blue-color;
     }
 
     .medium-avatar {
@@ -56,6 +61,7 @@
     }
 
     .close-modal-btn {
+        float: right;
         font-size: 50px;
         -webkit-text-fill-color: #b5c6cf;
         &:hover {
@@ -223,7 +229,7 @@
 .modal-input {
     border-radius: 8px;
     border: 1px solid #d5e2ea;
-    background-color: rgba(51, 100, 127, 0.05);
+    background-color: $input-bg;
     margin-bottom: 20px;
     color: black;
     font-size: 14px;
@@ -238,6 +244,18 @@
 
 
 // fixes for date picker
+
+.mx-input {
+    height: 57px!important;
+    background: $input-bg!important;
+}
+
 .mx-input-append {
     height: 35px!important;
+    top: 10px!important;
+}
+
+.mx-input-icon.mx-clear-icon,
+.mx-input-append svg {
+    background: $input-bg !important;
 }

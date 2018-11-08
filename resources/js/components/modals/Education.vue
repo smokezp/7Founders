@@ -5,10 +5,19 @@
                 <div class="modal-container">
 
                     <div class="modal-header">
-                        <slot name="header">
-                            <img class="logo" src="/images/7founders-logo.png">
-                        </slot>
-                        <span class="glyphicon glyphicon-remove-circle close-modal-btn" @click="close"></span>
+                        <div class="col-4">
+                            <slot name="header" class="float-left">
+                                <img class="logo" src="/images/7founders-logo.png">
+                            </slot>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="text">
+                                Add ad Education
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <span class="glyphicon glyphicon-remove-circle close-modal-btn" @click="close"></span>
+                        </div>
                     </div>
 
                     <div class="modal-body">
@@ -33,21 +42,27 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md">
-                                                    <date-picker v-model="datePickerSettings.start"
-                                                                 :first-day-of-week="datePickerSettings.firstDayOfWeek"
-                                                                 :lang="datePickerSettings.lang"
-                                                                 :width="datePickerSettings.width"
-                                                                 :format="datePickerSettings.format"
-                                                                 :type="datePickerSettings.type"
+                                                    <date-picker
+                                                        lass="float-left"
+                                                        v-model="datePickerSettings.start"
+                                                        :first-day-of-week="datePickerSettings.firstDayOfWeek"
+                                                        :lang="datePickerSettings.lang"
+                                                        :width="datePickerSettings.width"
+                                                        :format="datePickerSettings.format"
+                                                        :type="datePickerSettings.type"
+                                                        :placeholder="datePickerSettings.placeholder_start"
                                                     ></date-picker>
                                                 </div>
                                                 <div class="col-md">
-                                                    <date-picker v-model="datePickerSettings.end"
-                                                                 :first-day-of-week="datePickerSettings.firstDayOfWeek"
-                                                                 :lang="datePickerSettings.lang"
-                                                                 :width="datePickerSettings.width"
-                                                                 :format="datePickerSettings.format"
-                                                                 :type="datePickerSettings.type"
+                                                    <date-picker
+                                                        class="float-right"
+                                                        v-model="datePickerSettings.end"
+                                                        :first-day-of-week="datePickerSettings.firstDayOfWeek"
+                                                        :lang="datePickerSettings.lang"
+                                                        :width="datePickerSettings.width"
+                                                        :format="datePickerSettings.format"
+                                                        :type="datePickerSettings.type"
+                                                        :placeholder="datePickerSettings.placeholder_end"
                                                     ></date-picker>
                                                 </div>
                                             </div>
@@ -80,11 +95,13 @@
                 datePickerSettings: {
                     start: '',
                     end: '',
-                    width: 150,
+                    width: '100%',
                     lang: 'en',
                     firstDayOfWeek: 1,
                     format: 'YYYY',
-                    type: 'year'
+                    type: 'year',
+                    placeholder_start: 'START DATE',
+                    placeholder_end: 'END DATE'
                 }
             }
         },

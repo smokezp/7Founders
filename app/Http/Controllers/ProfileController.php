@@ -16,7 +16,7 @@ class ProfileController extends Controller
     public function index(Request $request)
     {
         if ($request->id == Auth::id()) {
-            $user = Auth::user();
+            $user = Auth::user()->load('educations');
             return view('profile.private', compact('user'));
         } else {
             $user = User::find($request->id);

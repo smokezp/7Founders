@@ -154,7 +154,7 @@
                     <div class="user-section" id="my_skills">
                         <label class="profile-label">My Skills</label>
                         <div class="col-md-11">
-                            <div class="row mt-3">
+                            <div class="row mt-3 mb-3">
                                 <div class="col-md">
                                     <div class="progress-container">
                                         <div class="progress" style="height: 5px;">
@@ -176,7 +176,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-3">
+                            <div class="row mt-3 mb-3">
                                 <div class="col-md">
                                     <div class="progress-container">
                                         <div class="progress" style="height: 5px;">
