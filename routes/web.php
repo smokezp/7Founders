@@ -24,4 +24,5 @@ Route::get('/profile/{id}', 'ProfileController@index')->name('profile')->middlew
 Route::group(['middleware' => 'auth'], function () {
     Route::post('/user/info', 'UserInfoController@store');
     Route::post('/profile/education', 'ProfileController@education');
+    Route::post('/profile/recommendation', 'ProfileController@recommendation');
 });

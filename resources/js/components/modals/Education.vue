@@ -50,11 +50,9 @@
 
 <script>
     import DatePicker from 'vue2-datepicker'
-    import axios from 'axios';
     import ModalWrapper from "../ModalWrapper";
 
     export default {
-        props:['close'],
         name: "EducationModal",
         data: () => {
             return {
@@ -76,17 +74,14 @@
         },
         methods: {
             save() {
-                axios.post('/profile/education', {
+                let params = {
                     name: this.educationName,
                     study_field: this.studyField,
                     start_year: this.getYear(this.datePickerSettings.start),
                     end_year: this.getYear(this.datePickerSettings.end),
-                }).then((response) => {
-                    if (response.status === 200) {
-                        this.$root.$emit('add-user-data', 'educations', response.data);
-                        this.$root.$emit('hide-modal');
-                    }
-                });
+                };
+
+                this.$root.$emit('save-user-data', '/profile/education', params, 'educations')
             },
             getYear(datetime) {
                 let date = new Date(datetime);

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEducationsTable extends Migration
+class CreateRecommendationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEducationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('educations', function (Blueprint $table) {
+        Schema::create('recommendations', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')
@@ -21,9 +21,7 @@ class CreateEducationsTable extends Migration
                 ->references('id');
 
             $table->string('name');
-            $table->string('study_field');
-            $table->smallInteger('start_year');
-            $table->smallInteger('end_year');
+            $table->text('text');
 
             $table->timestamps();
         });
@@ -36,6 +34,6 @@ class CreateEducationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('educations');
+        Schema::dropIfExists('recommendations');
     }
 }

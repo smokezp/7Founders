@@ -331,7 +331,8 @@
         height: 100px;
     }
     .recommendation-text {
-
+        line-height: 17px;
+        //text-overflow: ellipsis;
     }
 }
 

@@ -38,9 +38,21 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: "ModalWrapper",
         props: ['text'],
+        created() {
+            this.$root.$on('save-user-data', (url, params, save) => {
+                axios.post(url, params).then((response) => {
+                    if (response.status === 200) {
+                        this.$root.$emit('add-user-data', save, response.data);
+                        this.close();
+                    }
+                });
+            });
+        },
         methods: {
             close() {
                 this.$root.$emit('hide-modal');

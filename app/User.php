@@ -35,4 +35,8 @@ class User extends Authenticatable
     public function educations() {
         return $this->hasMany(Education::class);
     }
+
+    public function recommendations() {
+        return $this->hasMany(Recommendation::class);
+    }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\VerifiesEmails;
+use Illuminate\Support\Facades\Auth;
 
 class VerificationController extends Controller
 {
@@ -26,8 +26,13 @@ class VerificationController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/profile';
 
+    public function redirectPath()
+    {
+        $id = Auth::user()->id;
+        return $this->redirectTo .'/'. $id;
+    }
     /**
      * Create a new controller instance.
      *

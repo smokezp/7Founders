@@ -203,22 +203,23 @@
                     </button>
                     <div id="recommendations" class="user-section">
                         <label class="profile-label">Recommendations</label>
-                        <div class="col-md-11 m-auto recommendation">
-                            <div class="row">
-                                <div class="col-2">
-                                    <img class="avatar" src="/images/userImg.png">
-                                </div>
-                                <div class="col-5 m-auto recommendation-text">
-                                    JKHHhkhksdhfkdfhkjsdhfkjsdhfkjdhfkjhsdfksdfkdfsdsfsdjkfkhsdhfhsdkf
-                                    JKHHhkhksdhfkdfhkjsdhfkjsdhfkjdhfkjhsdfksdfkdfsdsfsdjkfkhsdhfhsdkf
-                                    JKHHhkhksdhfkdfhkjsdhfkjsdhfkjdhfkjhsdfksdfkdfsdsfsdjkfkhsdhfhsdkf
-                                </div>
-                                <div class="col-3 m-auto text-right">
-                                    Name sdfsdsfd
-                                    <br><span class="blue-text">dsfsdf</span>
+                        <div class="recommendations" v-if="user.recommendations">
+                            <div class="col-md-11 m-auto recommendation" v-for="recommendation in user.recommendations">
+                                <div class="row">
+                                    <div class="col m-auto text-center">
+                                        <img class="avatar" src="/images/userImg.png">
+                                    </div>
+                                    <div class="col-7 recommendation-text  m-auto">
+                                        {{recommendation.text}}
+                                    </div>
+                                    <div class="col text-right m-auto">
+                                        {{recommendation.name}}
+                                        <br><span class="blue-text">Officer</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <button type="button" class="btn btn-light profile-btn profile-show-more-btn">
                         <span class="glyphicon glyphicon-ok-circle"></span>Show More
@@ -227,22 +228,22 @@
                         <label class="profile-label">Education</label>
                         <div class="educations" v-if="user.educations">
 
-                        <div class="col-md-11 m-auto education" v-for="education in user.educations">
-                            <div class="row">
-                                <div class="col-2 m-auto">
-                                    <div class="icon-box">
-                                        <img src="/images/education.png">
+                            <div class="col-md-11 m-auto education" v-for="education in user.educations">
+                                <div class="row">
+                                    <div class="col-2 m-auto">
+                                        <div class="icon-box">
+                                            <img src="/images/education.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 m-auto">
+                                        {{education.name}}
+                                        <br><span class="blue-text">{{education.study_field}}</span>
+                                    </div>
+                                    <div class="col-4 float-right text-right m-auto">
+                                        {{education.start_year}} - {{education.end_year}}
                                     </div>
                                 </div>
-                                <div class="col-6 m-auto">
-                                    {{education.name}}
-                                    <br><span class="blue-text">{{education.study_field}}</span>
-                                </div>
-                                <div class="col-4 float-right text-right m-auto">
-                                    {{education.start_year}} - {{education.end_year}}
-                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
 

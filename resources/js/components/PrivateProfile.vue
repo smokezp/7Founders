@@ -235,12 +235,43 @@
                         <div class="input-wrapper">
                             <div class="form-group">
                                 <label class="profile-label">Recommendations</label>
+
+                                <div class="recommendations" v-if="user.recommendations">
+                                    <div class="recommendation" v-for="recommendation in user.recommendations">
+                                        <div class="row">
+                                            <div class="col m-auto text-center">
+                                                <img class="avatar" src="/images/userImg.png">
+                                            </div>
+                                            <div class="col-7 recommendation-text  m-auto">
+                                                {{recommendation.text}}
+                                            </div>
+                                            <div class="col text-right m-auto">
+                                                {{recommendation.name}}
+                                                <br><span class="blue-text">Officer</span>
+                                            </div>
+                                        </div>
+                                        <!--<div class="row">-->
+                                            <!--<div class="col-2 m-auto">-->
+                                                <!--<div class="icon-box">-->
+                                                    <!--<img src="/images/education.png">-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                            <!--<div class="col-6 m-auto">-->
+                                                <!--{{recommendation.name}}-->
+                                                <!--<br><span class="blue-text">{{education.study_field}}</span>-->
+                                            <!--</div>-->
+                                            <!--<div class="col-4 float-right text-right m-auto">-->
+                                                <!--{{recommendation.start_year}} - {{recommendation.end_year}}-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
                                 <div class="row">
-                                    <div class="col-sm">
+                                    <div class="col-sm" v-if="!user.recommendations">
                                         Write a short intro about yourself
                                     </div>
                                     <div class="col-sm">
-                                        <button type="button" class="circle-btn float-right">
+                                        <button type="button" class="circle-btn float-right" @click="showModal = 'recommendation'">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>
                                     </div>
@@ -281,6 +312,7 @@
                             </div>
                         </div>
                         <education-modal v-if="showModal === 'education'"></education-modal>
+                        <recommendation-modal v-if="showModal === 'recommendation'"></recommendation-modal>
                     </div>
                 </div>
 
@@ -291,6 +323,7 @@
 
 <script>
     import EducationModal from './modals/Education.vue';
+    import RecommendationModal from './modals/Recommendation.vue';
 
     export default {
         name: "PrivateProfile",
@@ -310,7 +343,7 @@
             });
         },
         components: {
-            EducationModal
+            EducationModal, RecommendationModal
         }
 
     }
