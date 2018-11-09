@@ -16,6 +16,7 @@ window.Vue = require('vue');
 
 Vue.component('post-register-modal', require('./components/modals/PostRegister.vue'));
 Vue.component('private-profile', require('./components/PrivateProfile.vue'));
+Vue.component('public-profile', require('./components/PublicProfile.vue'));
 
 const app = new Vue({
     el: '#app'

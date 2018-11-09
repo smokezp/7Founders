@@ -19,7 +19,7 @@ class ProfileController extends Controller
             $user = Auth::user()->load('educations');
             return view('profile.private', compact('user'));
         } else {
-            $user = User::find($request->id);
+            $user = User::find($request->id)->load('educations');
             return view('profile.public', compact('user'));
         }
 

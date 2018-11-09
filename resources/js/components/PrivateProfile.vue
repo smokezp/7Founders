@@ -218,7 +218,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm" v-if="!educations">
+                                    <div class="col-sm" v-if="!user.educations">
                                         Write a short intro about yourself
                                     </div>
 
